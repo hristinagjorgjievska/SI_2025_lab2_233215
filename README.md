@@ -7,7 +7,15 @@
 - Според Control Flow Graph-от, со броење на регионите (8) + 1, добив дека цикломатската комплексност е 9.
 
 ## 4. Tест случаи според Every Statement критериум
-#### Прв тест случај: Невалиден item (Празен стринг за name)
+#### Прв тест случај: Празна листа (allItems == null)
+```java
+        List<Item> items = null;
+        exception = assertThrows(RuntimeException.class, () -> {
+            SILab2.checkCart(items, "4972946510274820");
+        });
+        assertEquals("allItems list can't be null!", exception.getMessage());
+```
+#### Втор тест случај: Невалиден item (Празен стринг за name)
 ```java
         RuntimeException exception;
 
@@ -17,12 +25,6 @@
             SILab2.checkCart(items1, "4972946510274820");
         });
         assertEquals("Invalid item!", exception.getMessage());
-```
-#### Втор тест случај: Празна листа
-```java
-        List<Item> items = new ArrayList<>();
-        double checkCart1 = SILab2.checkCart(items, "4972946510274820");
-        assertEquals(0, checkCart1);
 ```
 #### Трет тест случај: Погрешен формат на картичка (содржи букви)
 ```java
