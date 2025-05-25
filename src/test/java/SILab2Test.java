@@ -9,6 +9,13 @@ class SILab2Test {
     void testEveryStatement(){
         RuntimeException exception;
 
+        //Празна листа (allItems == null)
+        List<Item> items = null;
+        exception = assertThrows(RuntimeException.class, () -> {
+            SILab2.checkCart(items, "4972946510274820");
+        });
+        assertEquals("allItems list can't be null!", exception.getMessage());
+
         //Невалидно име (празен стринг)
         List<Item> items1 = new ArrayList<>();
         items1.add(new Item("", 10, 5, 0.9));
@@ -17,10 +24,6 @@ class SILab2Test {
         });
         assertEquals("Invalid item!", exception.getMessage());
 
-        //Празна листа
-        List<Item> items = new ArrayList<>();
-        double testResult = SILab2.checkCart(items, "4972946510274820");
-        assertEquals(0, testResult);
 
         //Погрешен формат на картичка (содржи букви)
         List<Item> items2 = new ArrayList<>();
@@ -41,8 +44,8 @@ class SILab2Test {
         //Сите податоци се точно внесени
         List<Item> items4 = new ArrayList<>();
         items4.add(new Item("item5", 3, 350, 0.3));
-        double result = SILab2.checkCart(items4, "4972946510274820");
-        assertEquals(705.0, result, 0.0001);
+        double checkCart2 = SILab2.checkCart(items4, "4972946510274820");
+        assertEquals(705.0, checkCart2, 0.0001);
     }
 
     @Test
@@ -75,6 +78,6 @@ class SILab2Test {
         Item item4 = new Item("item4", 21, 732, 0.7);
         items4.add(item4);
         double checkCart4 = SILab2.checkCart(items4, cardNumber);
-        assertEquals(4581.6, checkCart4);}
-
+        assertEquals(4581.6, checkCart4);
+    }
 }
