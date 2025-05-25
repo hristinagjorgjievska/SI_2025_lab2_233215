@@ -1,12 +1,12 @@
 # Втора лабораториска вежба по Софтверско инженерство
-## Христина Ѓорѓиевска 233215
-### 2. Control Flow Graph
+# Христина Ѓорѓиевска 233215
+## 2. Control Flow Graph
 ![final](https://github.com/user-attachments/assets/9c2363e3-bfe2-4730-8a03-191621e3cf7b)
 
-### 3. Цикломатска комплексност
+## 3. Цикломатска комплексност
 - Според Control Flow Graph-от, со броење на регионите (8) + 1, добив дека цикломатската комплексност е 9.
 
-### 4. Tест случаи според Every Statement критериум
+## 4. Tест случаи според Every Statement критериум
 #### Прв тест случај: Невалиден item (Празен стринг за name)
 ```java
         RuntimeException exception;
@@ -56,7 +56,7 @@
 ```
 ### Минималниот број на тестови за Every Statement критериумот е 5.
 
-### 5. Multiple Condition критериумот за условот if (item.getPrice() > 300 || item.getDiscount() > 0 || item.getQuantity() > 10)
+## 5. Multiple Condition критериумот за условот if (item.getPrice() > 300 || item.getDiscount() > 0 || item.getQuantity() > 10)
 #### Прв тест случај: FFF
 ```java
         String cardNumber = "0123456789876543";
