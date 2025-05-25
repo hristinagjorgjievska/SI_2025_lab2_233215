@@ -9,6 +9,8 @@
 ## 4. Tест случаи според Every Statement критериум
 #### Прв тест случај: Празна листа (allItems == null)
 ```java
+        RuntimeException exception;
+
         List<Item> items = null;
         exception = assertThrows(RuntimeException.class, () -> {
             SILab2.checkCart(items, "4972946510274820");
