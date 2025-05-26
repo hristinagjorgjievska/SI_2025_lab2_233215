@@ -1,7 +1,8 @@
 # Втора лабораториска вежба по Софтверско инженерство
 # Христина Ѓорѓиевска 233215
 ## 2. Control Flow Graph
-![final](https://github.com/user-attachments/assets/9c2363e3-bfe2-4730-8a03-191621e3cf7b)
+![final](https://github.com/user-attachments/assets/72508138-dff4-4ac8-88b2-5ed093b4fa7e)
+
 
 ## 3. Цикломатска комплексност
 - Според Control Flow Graph-от, со броење на регионите (8) + 1, добив дека цикломатската комплексност е 9.
